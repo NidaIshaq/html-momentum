@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Include Tailwind CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to CSS file -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Koulen&family=Meera+Inimai&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="w-full">
+      <div
+        style="background-color: #4b4be2"
+        class="w-full h-20 fixed top-0 shadow-lg z-50 flex justify-between items-center px-4 sm:px-6 md:px-10 lg:px-20"
+      >
+        <img
+          src="Group 19.png"
+          alt="group"
+          class="w-[60px] h-[35px] md:w-[78px] md:h-[41px]"
+        />
+
+        <div class="flex items-center space-x-4">
+          <button
+            style="background-color: #b52d24"
+            class="text-white px-4 py-1 rounded-l-md text-sm md:text-base hover:bg-opacity-80 transition-all duration-200"
+          >
+            Registration
+          </button>
+
+          <button
+            style="background-color: #b52d24"
+            class="text-white px-4 py-1 rounded-md text-sm md:text-base hover:bg-opacity-80 transition-all duration-200"
+          >
+            Login
+          </button>
+
+          <img
+            src="Ellipse.png"
+            alt="eclipse"
+            class="hidden md:block w-8 h-8 md:w-10 md:h-10 mx-2"
+          />
+          <!-- Added 'mx-2' for left and right margin -->
+        </div>
+      </div>
+    </div>
+
+    <!--courses-->
+    <div class="w-full h-screen overflow-hidden relative flex flex-col">
+      <!-- Top fixed bar -->
+      <div
+        class="w-full mt-20 left-0 z-10"
+        style="background-color: #4b4be2; height: 30px"
+      ></div>
+
+      <!-- Main Content -->
+      <div class="flex flex-row flex-grow justify-center overflow-hidden">
+        <div class="flex-grow-1 w-[70%] mt-20" style="width: 80%">
+          <div
+            class="w-[80%] ml-8 object-cover text-6xl font-[Koulen] font-bold"
+            style="color: #b52d24"
+          >
+            What's in the course
+          </div>
+          <div
+            class="font-[Meera Inimai] font-normal text-5xl mt-16 ml-10 text-black"
+          >
+            On this course you will learn
+            <br />
+          </div>
+          <div
+            class="font-[Meera Inimai] font-normal flex flex-col gap-2 text-2xl leading-[3rem] ml-8 mt-10"
+          >
+            <p>-The principles and mechanics of using AI in trading</p>
+            <p>
+              -How to properly compose and implement automated trading
+              strategies
+            </p>
+            <p>
+              -Use your ideas in practice, because
+              <span class="text-red-600">we’ve got a present for you!</span>
+            </p>
+            <br />
+            <br />
+          </div>
+        </div>
+        <div class="flex-grow" style="width: 20%">
+          <img
+            src="/photo_2024-09-09 17.16.29 1.png"
+            alt="photo"
+            class="w-full object-cover"
+          />
+        </div>
+      </div>
+
+      <!-- Bottom fixed bar -->
+      <div
+        class="w-full left-0"
+        style="background-color: #b52d24; height: 30px"
+      ></div>
+    </div>
+
+    <!-- About page -->
+    <div class="w-full h-[90vh] overflow-hidden border-b-[10px] relative">
+      <div class="flex flex-row w-full h-full">
+        <!-- Left Section -->
+        <div class="flex flex-col items-start mt-20 w-1/2 h-full">
+          <div
+            class="w-[80%] text-7xl mb-6 ml-12 font-bold font-[Koulen] text-center md:text-center"
+            style="color: #4b4be2"
+          >
+            About the project
+          </div>
+          <img
+            src="Ellipse 16.png"
+            alt="red eclipse"
+            class="absolute right-0 mt-12 block lg:hidden"
+          />
+          <img
+            src="Ellipse 17.png"
+            alt="blue eclipse"
+            class="absolute right-0 mt-20 block lg:hidden"
+          />
+
+          <div
+            class="text-2xl font-semibold font-[Meera Inimai] leading-[3.5rem] mt-5 ml-12 text-black text-center md:text-left"
+          >
+            We use tons of data to constantly <br />
+            develop and improve our product so <br />
+            you can make money with us!
+          </div>
+
+          <div
+            class="text-2xl font-semibold font-[Meera Inimai] leading-[3.5rem] mt-5 ml-12 text-center md:text-left"
+          >
+            Our team creates effective content by eliminating <br />
+            all unnecessary content so you don't waste your <br />
+            time on another google first link reading!
+          </div>
+
+          <div
+            class="mt-10 ml-6 mb-7 text-4xl px-4 py-2 font-bold font-[Koulen] text-center"
+            style="color: #b52d24"
+          >
+            Subscribe on TG to learn more
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="flex flex-col justify-end mb-16 ml-60 w-1/4 relative">
+          <img
+            src="/traced-P8240342 1.png"
+            alt="about trac"
+            class="w-[80%] hidden md:block"
+          />
+          <!-- Hide on mobile -->
+
+          <div
+            class="border-b-2 relative border-black w-[90%] z-0"
+            class="hidden md:block"
+          >
+            <div
+              class="flex absolute justify-end space-x-3 mb-6 z-10"
+              style="top: -20px; right: 0px"
+            >
+              <button class="border-4 border-black rounded-full p-3">
+                <img src="/Group (1).png" alt="YouTube" class="w-5 h-5" />
+              </button>
+
+              <button class="border-4 border-black rounded-full p-3">
+                <img src="/Vector.png" alt="Instagram" class="w-5 h-5" />
+              </button>
+
+              <button class="border-4 border-black rounded-full p-3">
+                <img src="/Vector (1).png" alt="LinkedIn" class="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div
+        class="w-full absolute bottom-0 left-0"
+        style="background-color: #4b4be2; height: 30px"
+      ></div>
+    </div>
+
+    <!--botstats-->
+   
+    <div class="w-full h-screen flex flex-col">
+      <!-- Top Row -->
+      <div class="flex flex-col lg:flex-row flex-[0.85]">
+        <div class="w-full lg:w-1/2 flex flex-col p-4 lg:p-10">
+          <div class="font-bold font-[Koulen] text-7xl leading-tight lg:leading-[1.2]  mt-4 lg:mt-10" style="color: #B52D24;">
+            OUR BOT STATS
+          </div>
+          <div class="font-semibold font-[Meera Inimai] text-lg lg:text-4xl leading-8 lg:leading-[80px] mt-2">
+            06/09/2022 - 17/07/24
+          </div>
+          <div class="flex flex-col lg:flex-row mt-6 lg:mt-10">
+            <div class="flex flex-col w-full lg:w-1/3 mt-6 lg:mt-0">
+              <div class="font-[Koulen]  text-3xl lg:text-5xl" style="color:#4B4BE2 ;">
+                DEPOSIT
+              </div>
+              <div class="font-[Meera Inimai] text-3xl lg:text-5xl mt-2 lg:mt-4">
+                10 000$
+              </div>
+            </div>
+            <div class="w-1/2 lg:w-1/2 flex justify-center lg:justify-start lg:mt-0">
+              <img 
+                src="Arrow 1.png" 
+                alt="arrow" 
+                style="width: 50%; margin-top: -80px; margin-left: 70px;" 
+              />
+            </div>
+            
+            
+          </div>
+          <div class="flex flex-row lg:flex-row font-bold mt-8 lg:mt-24 space-y-4 lg:space-y-0 lg:space-x-8">
+            <div class="font-[Koulen] text-xl lg:text-3xl">
+              winrate - 68.76%
+            </div>
+            <div class="font-[Koulen] text-xl lg:text-3xl">
+              balance drawdown - 11.55%
+            </div>
+          </div>
+        </div>
+    
+        <div class="w-full lg:w-1/2 flex flex-col  lg:mt-0 p-4 lg:p-10">
+          <!-- Upper Section with Group Image and Button -->
+          <div class="relative flex justify-end lg:justify-end h-40 lg:h-72" style="height: 300px;">
+            <!-- Large image aligned to the right -->
+            <img src="Group 17.png" alt="group" class="w-[55%] h-auto z-0" />
+            
+            <!-- Button centered over the image -->
+            <button class="absolute top-40 transform -translate-y-1/2 font-[Koulen] text-white bg-slate-800 font-semibold py-1 px-12 lg:px-8 text-sm lg:text-lg z-10">
+              WATCH GRAPHICS
+            </button>
+          </div>
+    
+          <!-- Bottom Section -->
+          <div class="flex-1 mt-4 lg:mt-8">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center">
+              <div class="flex flex-col">
+                <div class="font-[Koulen] text-3xl lg:text-5xl mt-6" style="color: #B52D24;">
+                  Total in 22 months
+                </div>
+                <div class="font-[Meera Inimai] text-3xl lg:text-5xl mt-4">
+                  276 269$
+                </div>
+              </div>
+              <div class="relative flex justify-center lg:ml-40 mt-8 lg:mt-10">
+                <button class="h-16 w-16 lg:h-20 lg:w-20 rounded-2xl border-none outline-none shadow-none focus:outline-none z-0" style="background-color:#3B9E38 ;"></button>
+                <img src="Arrow 2.png" alt="arrow-2" class="absolute z-10" style="top: 50%; left: 50%; transform: translate(-50%, -50%); border: none;" />
+              </div>
+            </div>
+            <div class="flex flex-col lg:flex-row mt-8 lg:mt-20 space-y-4 lg:space-y-0 lg:space-x-8">
+              <div class="font-[Koulen] text-lg lg:text-2xl">
+                equity drawdown - 12.13%
+              </div>
+              <div class="font-[Koulen] text-lg lg:text-2xl">
+                sharp ratio - 6.92%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Bottom Border -->
+      <div class=" w-full absolute   mt-auto" style="background-color:#B52D24 ; height: 30px; "></div>
+    </body>
+    </html>
+    
+   
+
+   
+ 
