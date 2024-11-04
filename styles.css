@@ -1,15 +1,3 @@
-
-.hero-section {
-  width: 100%;
-  height: calc(100vh - 80px);
-  margin-top: 80px;
-  position: relative;
-  display: flex;
-  background: url("pattern-simmetrichnyj-treugolnik 1.png") right
-    center/contain no-repeat;
-  background-size: 60%;
-}
-
 .sub-container-1 {
   width: 50%;
   padding: 60px;
@@ -22,27 +10,6 @@
   font-size: 32px;
   color: black;
   margin-bottom: 20px;
-}
-
-.main-heading {
-  font-family: "Koulen", sans-serif;
-  font-size: 96px;
-  line-height: 1;
-  color: rgba(181, 45, 36, 1);
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.price {
-  font-size: 44px;
-  font-weight: 700;
-  color: #3b9e38;
-  margin-bottom: 30px;
-}
-
-.buttons {
-  display: flex;
-  gap: 20px;
 }
 
 .btn {
@@ -62,70 +29,8 @@
   background-color: #4b4be2;
 }
 
-.sub-container-2 {
-  width: 50%;
-  position: relative;
-  background: url("./traced-P8240358\ 1.png") center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: end; /* Ensures overlay text is spaced from the top and bottom */
-  padding: 30px; /* Adjust padding to prevent content from touching edges */
-  padding-bottom: 0%;
-  padding-right: 0%;
-}
-
-.overlay-text {
-  align-self: flex-end; /* Aligns text to the right */
-  color: #3b9e38;
-  font-size: 32px;
-  font-weight: bold;
-  margin-top: 30px; /* Adds space from the top */
-  padding-bottom: 10px;
-  padding-right: 30px;
-}
-
-.dark-overlay {
-  width: 80%;
-  display: flex;
-  align-self: flex-end;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 20px;
-  padding-bottom: 80px;
-  /* margin-bottom: 50px; Keeps spacing from the bottom */
-  /* z-index: 99; */
-}
-
-.marquee-container {
-  /* z-index: 1; */
-  position: absolute;
- 
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50px;
-  overflow: hidden;
-  background: transparent;
-}
-
-.marquee {
-  display: flex;
-  position: absolute;
-  animation: marquee 20s linear infinite;
-  white-space: nowrap;
-}
-
-.marquee-item {
-  padding: 0 20px;
-  font-weight: bold;
-  line-height: 50px;
-  color: black;
-}
-
 .letter.white {
-color: white;
+  color: white;
 }
 
 @keyframes marquee {
@@ -135,17 +40,465 @@ color: white;
   100% {
     transform: translateX(-100%);
   }
-}
-
+  /*querry for mobile*/
+} /* Media query for small screens (768px or smaller) */
 @media (max-width: 768px) {
   .hero-section {
-    flex-direction: column;
+    flex-direction: col;
   }
-  .sub-container-1,
-  .sub-container-2 {
+
+  .sub-container-1 {
     width: 100%;
+    height: 100%;
   }
+  .sub-container-2 {
+    display: none;
+  }
+
+  .antn {
+    display: none; /* Display the image on screens 768px or smaller */
+  }
+  .sub-heading {
+    display: none;
+  }
+
+  .price {
+    text-align: left;
+    font-size: 44px;
+    font-weight: 700;
+    color: #3b9e38;
+    margin-bottom: 9%; /* Adds bottom margin on larger screens */
+    order: 0; /* Default order, keeping it in its original position */
+  }
+  .overlay-text {
+    display: none; /* Hide .overlay-text on small screens */
+  }
+  .dark-overlay {
+    display: none;
+  }
+  .marquee-container {
+    display: none;
+  }
+  .marquee {
+    display: none;
+  }
+  .marquee-item {
+    display: none;
+  }
+  .hero-section {
+    flex-direction: column;
+    width: 100%;
+    height: 344px;
+    margin-top: 80px; /* auto for traced image, 60% for pattern */
+    margin-bottom: 0px;
+    /* Layered backgrounds */
+    background: url("./traced-P8240358 1.png") left center/150% no-repeat,
+      /* Traced image */ url("pattern-simmetrichnyj-treugolnik 1.png") center
+        center/cover no-repeat; /* Pattern image */
+
+    /* You can adjust the background-size for the pattern as needed */
+  }
+  .antn {
+    display: block;
+    height: 50%;
+    width: 50%;
+    margin-bottom: 90px;
+    order: 1;
+  }
+  .border {
+    height: 350px;
+    width: 100%;
+    background-color: #4b4be2;
+    position: relative; /* Establishes positioning context for .main-heading */
+  }
+
   .main-heading {
-    font-size: 64px;
+    font-family: "Koulen", sans-serif;
+    font-size: 56px;
+    line-height: 1;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 35%;
+
+    position: absolute; /* Places .main-heading relative to .border */
+    top: 50%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Centers perfectly */
+
+    z-index: 10; /* Brings .main-heading above other elements */
+    text-align: center;
+  }
+  .buttons {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    position: absolute;
+    top: 580px; /* Adjust to control vertical placement */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    z-index: 10; /* Ensures buttons are above .border background */
+  }
+  .btn {
+    padding: 12px 40px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    width: 210px;
+    height: 70px;
+    font: bold;
+  }
+
+  .btn-primary {
+    background-color: #b52d24;
+  }
+
+  .btn-secondary {
+    background-color: white;
+    color: black;
+  }
+
+  .letter.white {
+    color: white;
+  } /*courses*/
+  .courses {
+    /* courses*/
+    width: 100%;
+
+    display: flex;
+    background-color: white;
+  }
+  .course-heading {
+    text-align: center;
+    color: #b52d24;
+    font-family: "Koulen", sans-serif;
+    font-size: 66px;
+    line-height: 1;
+    padding: 20px;
+    text-transform: uppercase;
+    margin-top: 5%;
+  }
+  .h3 {
+    text-align: center;
+    color: black;
+    font-family: "Meera Inimai", sans-serif;
+    font-size: 36px;
+    line-height: 1;
+    padding: 20px;
+    font: bold;
+  }
+  .prara1 {
+    color: black;
+    font-family: "Meera Inimai", sans-serif;
+    font-size: 26px;
+    line-height: 2;
+    padding: 12px;
+  }
+  .span {
+    color: #b52d24;
+    font-family: "Meera Inimai", sans-serif;
+    font-size: 26px;
+    line-height: 2;
+  }
+  .course-img {
+    display: none;
+  }
+  .course-container {
+    height: auto;
+    width: 100%;
+    padding: 4%;
+  }
+  .p2 {
+    text-align: right;
+  }
+  .p3 {
+    text-align: left;
+  }
+  .span1 {
+    display: none;
+  } /* Styling for the container to arrange items in a row */
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust spacing between items as needed */
+  }
+
+  .item {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Ensures paragraph and image are on opposite sides */
+  }
+
+  /* Styling for paragraphs */
+  .prara1 {
+    flex: 1; /* Makes the paragraph take up available space */
+    margin: 0;
+  }
+
+  /* Adjust alignment of individual images */
+  .img1,
+  .img3 {
+    text-align: right;
+  }
+
+  .img2 {
+    text-align: left;
+  }
+  .red-border {
+    display: none;
   }
 }
+
+/* Media query for larger screens (769px or larger) */
+@media (min-width: 769px) {
+  .hero-section {
+    flex-direction: row; /* Arrange items horizontally on larger screens */
+  }
+
+  .main-heading {
+    font-size: 96px; /* Larger font size on larger screens */
+  }
+
+  .antn {
+    display: none !important; /* Hide the image on screens larger than 768px */
+  }
+
+  .price {
+    font-size: 44px;
+    font-weight: 700;
+    color: #3b9e38;
+    margin-bottom: 30px; /* Adds bottom margin on larger screens */
+    order: 0; /* Default order, keeping it in its original position */
+  }
+  .overlay-text {
+    display: block; /* Show .overlay-text on larger screens */
+    align-self: flex-end; /* Aligns text to the right */
+    color: #3b9e38;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 30px; /* Adds space from the top */
+    padding-bottom: 10px;
+    padding-right: 30px;
+  }
+  .dark-overlay {
+    width: 80%;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    padding-bottom: 80px;
+    /* margin-bottom: 50px; Keeps spacing from the bottom */
+    /* z-index: 99; */
+  }
+  .border {
+    height: 30px;
+    width: 100%;
+    background-color: #4b4be2;
+  }
+  .marquee-container {
+    /* z-index: 1; */
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    overflow: hidden;
+    background: transparent;
+  }
+
+  .marquee {
+    display: flex;
+    position: absolute;
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
+  }
+
+  .marquee-item {
+    padding: 0 20px;
+    font-weight: bold;
+    line-height: 50px;
+    color: black;
+  }
+  .sub-container-2 {
+    width: 50%;
+    position: relative;
+    background: url("./traced-P8240358\ 1.png") center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end; /* Ensures overlay text is spaced from the top and bottom */
+    padding: 30px; /* Adjust padding to prevent content from touching edges */
+    padding-bottom: 0%;
+    padding-right: 0%;
+  }
+  .hero-section {
+    width: 100%;
+    height: calc(100vh - 80px);
+    margin-top: 80px;
+    position: relative;
+    display: flex;
+    background: url("pattern-simmetrichnyj-treugolnik 1.png") right
+      center/contain no-repeat;
+    background-size: 60%;
+  }
+  .main-heading {
+    font-family: "Koulen", sans-serif;
+    font-size: 96px;
+    line-height: 1;
+    color: rgba(181, 45, 36, 1);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  .buttons {
+    display: flex;
+    gap: 20px;
+  }
+  .courses {
+    /* courses*/
+    width: 100%;
+
+    display: flex;
+    background-color: white;
+  }
+  .course-heading {
+    color: #b52d24;
+    font-family: "Koulen", sans-serif;
+    font-size: 86px;
+    line-height: 1;
+    padding: 20px;
+    text-transform: uppercase;
+    margin-top: 5%;
+  }
+  .h3 {
+    color: black;
+    font-family: "Meera Inimai", sans-serif;
+    font-size: 46px;
+    line-height: 1;
+    padding: 20px;
+    font: bold;
+  }
+  .prara1 {
+    color: black;
+    font-family: "Meera Inimai", sans-serif;
+    font-size: 26px;
+    line-height: 2;
+    padding: 20px;
+  }
+  .span {
+    color: #b52d24;
+    font-family: "Meera Inimai", sans-serif;
+    font-size: 26px;
+    line-height: 2;
+  }
+  .course-img {
+    height: auto;
+    width: 20%;
+  }
+  .course-container {
+    height: auto;
+    width: 80%;
+  }
+  .img-arr {
+    display: none;
+  }
+  .red-border {
+    background-color: #b52d24;
+    height: 30px;
+  }
+
+  /*About page*/
+  .about {
+    width: 100%;
+
+    display: flex;
+    background-color: pink;
+  }
+  .about-container1 {
+    background-color: plum;
+    height: auto;
+    width: 60%;
+  }
+  .about-container2 {
+    background-color: aquamarine;
+    height: auto;
+    width: 40%;
+    flex-direction: row;
+ 
+
+  }.about-heading{
+    color: #4b4be2;
+    font-family: "Koulen", sans-serif;
+    font-size: 86px;
+    line-height: 1;
+    padding: 20px;
+    text-transform: uppercase;
+    margin-top: 5%;
+  }.about-para{
+    color: black;
+    font-family: "Meera Inimai", sans-serif;
+    font-size: 26px;
+    line-height: 1;
+    padding: 20px;
+
+  }.about-p{
+    color: #b52d24;
+    font-family: "Meera Inimai", sans-serif;
+    font-size: 46px;
+    line-height: 2;
+    padding: 20px;
+font: bolder;
+
+  }.about-img{
+    margin-left: 50px;
+    width: 80%;
+    z-index: 10px;
+    position: relative;
+  }
+  .about-btn {
+    display: flex;
+  justify-content: end;
+    gap:10px;
+    margin-right: 70px;
+    border: 2px solid #b52d24;
+    z-index: 10px;
+ 
+    
+
+}
+
+.btn-1,.btn-3,.btn-2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Makes the button round */
+    border: 2px solid black; /* Optional border around button */
+    overflow: hidden; /* Ensures the image stays within the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: transparent;/* Remove button background color */
+
+}
+
+.btn-1 img,.btn-2 img,.btn-3 img {
+    width: 60%; /* Image covers entire button */
+    height: 60%;
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+}.line {
+  border-top: 2px solid black; /* Adjust thickness here */
+  width: 90%; /* Adjust width here */
+  height: 0; /* No height needed for a line */
+  margin: 0px auto; /* Centering and spacing */
+}
+ 
+    
+
+  }
+
+
