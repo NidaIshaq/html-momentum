@@ -43,6 +43,74 @@
   /*querry for mobile*/
 } /* Media query for small screens (768px or smaller) */
 @media (max-width: 768px) {
+  .about {
+    display: block; 
+  }.about-para{
+   
+    align-items: left;
+  }.about-para small{
+   
+   text-align: right;
+  }.about-text{
+    padding: 5%;
+  }
+
+  .about-container1 {
+    display: block; /* Ensures container1 is displayed normally */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+   
+  }.about-row1, .about-row2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 12%;
+  
+    margin-bottom: 20px; /* Adds some space between the rows */
+  } .about-container2 {
+    display: flex; /* Show about-container2 but only display buttons */
+    justify-content: center;
+   
+  }.about-img{
+    display: none;
+  }
+  
+  
+  
+.about-heading{
+  color: #4b4be2;
+  font-family: "Koulen", sans-serif;
+  font-size: 46px;
+  line-height: 1;
+ text-align: center;
+ padding: 2%;
+  text-transform: uppercase;
+
+}.eclipse1{
+  order: 2;
+  height: 5%;
+  width: 5%;
+}.eclipse2{
+ 
+  height: 5%;
+  width: 5%;
+}.btn-group {
+display: none;
+}
+
+.btn1,
+.btn2,
+.btn3 {
+display: none;
+}
+
+.img {
+display: none;
+}
+
   .hero-section {
     flex-direction: col;
   }
@@ -250,7 +318,17 @@
   .red-border {
     display: none;
   }
+  .overlay-text {
+  }
+  /*About page*/
+
 }
+
+
+  
+
+
+
 
 /* Media query for larger screens (769px or larger) */
 @media (min-width: 769px) {
@@ -279,7 +357,7 @@
     color: #3b9e38;
     font-size: 32px;
     font-weight: bold;
-    margin-top: 30px; /* Adds space from the top */
+    margin-top: 30%; /* Adds space from the top */
     padding-bottom: 10px;
     padding-right: 30px;
   }
@@ -371,7 +449,7 @@
     font-family: "Koulen", sans-serif;
     font-size: 86px;
     line-height: 1;
-    padding: 20px;
+    padding: 30px;
     text-transform: uppercase;
     margin-top: 5%;
   }
@@ -380,15 +458,15 @@
     font-family: "Meera Inimai", sans-serif;
     font-size: 46px;
     line-height: 1;
-    padding: 20px;
+    padding: 30px;
     font: bold;
   }
   .prara1 {
     color: black;
     font-family: "Meera Inimai", sans-serif;
     font-size: 26px;
-    line-height: 2;
-    padding: 20px;
+    line-height: 1;
+    padding: 30px;
   }
   .span {
     color: #b52d24;
@@ -415,90 +493,99 @@
   /*About page*/
   .about {
     width: 100%;
-
+    height: calc(100vh - 50px);
     display: flex;
-    background-color: pink;
   }
   .about-container1 {
-    background-color: plum;
     height: auto;
     width: 60%;
   }
-  .about-container2 {
-    background-color: aquamarine;
-    height: auto;
-    width: 40%;
-    flex-direction: row;
  
-
-  }.about-heading{
+  .about-heading {
     color: #4b4be2;
     font-family: "Koulen", sans-serif;
     font-size: 86px;
     line-height: 1;
-    padding: 20px;
+    padding: 30px;
     text-transform: uppercase;
     margin-top: 5%;
-  }.about-para{
+  }
+  .about-para {
     color: black;
     font-family: "Meera Inimai", sans-serif;
     font-size: 26px;
     line-height: 1;
-    padding: 20px;
-
-  }.about-p{
+    padding: 30px;
+  }
+  .about-p {
     color: #b52d24;
     font-family: "Meera Inimai", sans-serif;
     font-size: 46px;
-    line-height: 2;
-    padding: 20px;
-font: bolder;
 
-  }.about-img{
-    margin-left: 50px;
-    width: 80%;
-    z-index: 10px;
-    position: relative;
+    line-height: 1;
+  padding: 30px;
+    font: bolder;
+  margin-top: 2%;
+  } .about-container2 {
+    height: auto;
+    width: 40%;
+    flex-direction: row;
   }
-  .about-btn {
+  .about-img {
+    width: 80%;
+  }
+  .btn {
     display: flex;
-  justify-content: end;
-    gap:10px;
-    margin-right: 70px;
-    border: 2px solid #b52d24;
-    z-index: 10px;
- 
-    
-
-}
-
-.btn-1,.btn-3,.btn-2 {
+    flex-direction: row;
+    gap: 10px; /* Adds space between buttons */
+  }.line-container {
+    position: relative; /* Container for relative positioning */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align buttons at the end of the container */
+    width: 70%; /* Full width of the container */
+  }
+  
+  .line {
+    border: 1px solid black;
+    width: 100%;
+    position: relative;
+     /* Space between line end and buttons */
+  }
+  
+  .btn-group {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    position: absolute;
+    /* Position buttons at the end of the line */
+    top: 50%; /* Center align vertically with line */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+  }
+  
+  .btn1,
+  .btn2,
+  .btn3 {
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Makes the button round */
-    border: 2px solid black; /* Optional border around button */
-    overflow: hidden; /* Ensures the image stays within the circle */
+    border: 2px solid black;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-  
-    background-color: transparent;/* Remove button background color */
-
-}
-
-.btn-1 img,.btn-2 img,.btn-3 img {
-    width: 60%; /* Image covers entire button */
-    height: 60%;
-    object-fit: cover; /* Ensures the image maintains its aspect ratio */
-}.line {
-  border-top: 2px solid black; /* Adjust thickness here */
-  width: 90%; /* Adjust width here */
-  height: 0; /* No height needed for a line */
-  margin: 0px auto; /* Centering and spacing */
-}
- 
-    
-
+    overflow: hidden;
+    padding: 0;
+    background-color: white;
   }
-
-
+  
+  .img {
+    width: 60%; /* Adjust image size to fit within the button */
+    height: 60%;
+    object-fit: contain;
+  }
+  .eclipse1 {
+    display: none;
+  }
+  .eclipse2 {
+    display: none;
+  }
+}
